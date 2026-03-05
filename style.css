@@ -1,0 +1,231 @@
+/* ------------------------------------------------------------------
+   TIPOGRAFIES I ESTILS BASE
+------------------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --color-rosa: #f08bb4;
+    --color-rosa-fosc: #d66a92;
+    --color-fons-suau: #fff4fa;
+    --color-text: #2a2a2a;
+    --color-fosc: #222;
+    --color-blanc: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-fons-suau);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------
+   HEADER
+------------------------------------------------------------------ */
+
+.site-header {
+    width: 100%;
+    background: var(--color-blanc);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-rosa);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-rosa-fosc);
+}
+
+.main-nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-rosa-fosc);
+}
+
+/* Botons d'idioma */
+.idiomes .chip {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    background: var(--color-rosa);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background 0.2s;
+}
+
+.idiomes .chip:hover {
+    background: var(--color-rosa-fosc);
+}
+
+/* ------------------------------------------------------------------
+   HERO
+------------------------------------------------------------------ */
+
+.hero {
+    background: linear-gradient(135deg, #ffd6eb, #f8c8d8, #ffe3f2);
+    padding: 120px 40px;
+    text-align: center;
+    border-bottom: 4px solid var(--color-rosa);
+}
+
+.hero-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--color-fosc);
+    max-width: 900px;
+    margin: 0 auto 15px;
+}
+
+.hero-sub {
+    font-size: 20px;
+    color: var(--color-text);
+    margin-bottom: 30px;
+}
+
+.hero-cta a {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-cta a:first-child {
+    background: var(--color-rosa);
+    color: var(--color-blanc);
+}
+
+.hero-cta a:first-child:hover {
+    background: var(--color-rosa-fosc);
+}
+
+.hero-cta a:last-child {
+    background: var(--color-blanc);
+    color: var(--color-rosa-fosc);
+    border: 2px solid var(--color-rosa-fosc);
+}
+
+.hero-cta a:last-child:hover {
+    background: var(--color-rosa);
+    color: white;
+}
+
+/* ------------------------------------------------------------------
+   SECCIONS GENERALS
+------------------------------------------------------------------ */
+
+.section {
+    padding: 70px 40px;
+}
+
+.section.dark {
+    background: var(--color-fosc);
+    color: var(--color-blanc);
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------
+   CARDS DE SERVEIS
+------------------------------------------------------------------ */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    width: 260px;
+    border-radius: 10px;
+    border: 2px solid var(--color-rosa);
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 12px 20px rgba(0,0,0,0.15);
+}
+
+/* ------------------------------------------------------------------
+   ENLLAÇOS DE SECCIÓ
+------------------------------------------------------------------ */
+
+.section-actions a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--color-rosa-fosc);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.section-actions a:hover {
+    background: var(--color-fosc);
+}
+
+/* ------------------------------------------------------------------
+   FOOTER
+------------------------------------------------------------------ */
+
+.site-footer {
+    background: var(--color-fosc);
+    color: var(--color-blanc);
+    padding: 40px 40px;
+    border-top: 3px solid var(--color-rosa);
+    margin-top: 40px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.socials a {
+    color: var(--color-rosa);
+    font-weight: 600;
+    margin-right: 12px;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: var(--color-blanc);
+}
