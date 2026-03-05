@@ -1,18 +1,22 @@
-/* ------------------------------------------------------------------
-   TIPOGRAFIES I ESTILS BASE
------------------------------------------------------------------- */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap');
+/* --------------------------------------------------------------
+   TIPOGRAFIA + PALETA DE COLORS — CHRYSALIS A.F.
+-------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
-    --color-rosa: #f08bb4;
-    --color-rosa-fosc: #d66a92;
-    --color-fons-suau: #fff4fa;
-    --color-text: #2a2a2a;
-    --color-fosc: #222;
-    --color-blanc: #fff;
+    --bg-main: #0f0a1a;           /* negre violeta profund */
+    --bg-soft: #1a1329;           /* gradient fosc */
+    --purple-strong: #5c1d80;     /* porpra intens identitari */
+    --purple-light: #b87de5;      /* porpra clar lluminós */
+    --accent-gold: #d9c178;       /* daurat subtil modern */
+    --white: #ffffff;
+    --text-light: #eae4f7;
+    --text-soft: #cfc7dd;
 }
 
+/* --------------------------------------------------------------
+   ESTILS BASE
+-------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -20,24 +24,22 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--color-fons-suau);
-    color: var(--color-text);
-    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-main);
+    color: var(--text-light);
+    line-height: 1.7;
 }
 
-/* ------------------------------------------------------------------
+/* --------------------------------------------------------------
    HEADER
------------------------------------------------------------------- */
-
+-------------------------------------------------------------- */
 .site-header {
-    width: 100%;
-    background: var(--color-blanc);
+    background: var(--bg-main);
+    border-bottom: 2px solid var(--purple-light);
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid var(--color-rosa);
     position: sticky;
     top: 0;
     z-index: 999;
@@ -45,187 +47,163 @@ body {
 
 .logo-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--color-rosa-fosc);
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
 }
 
 .main-nav a {
-    margin: 0 12px;
+    margin: 0 15px;
+    color: var(--text-light);
     text-decoration: none;
-    color: var(--color-text);
     font-weight: 600;
-    transition: color 0.2s ease;
+    transition: 0.3s;
 }
 
 .main-nav a:hover {
-    color: var(--color-rosa-fosc);
+    color: var(--accent-gold);
 }
 
-/* Botons d'idioma */
-.idiomes .chip {
-    padding: 6px 10px;
-    border-radius: 5px;
+.idiomes button {
+    background: var(--purple-strong);
     border: none;
-    background: var(--color-rosa);
+    padding: 6px 12px;
+    border-radius: 6px;
     color: white;
     font-weight: 600;
     cursor: pointer;
     margin-left: 5px;
-    transition: background 0.2s;
+    transition: 0.3s;
 }
 
-.idiomes .chip:hover {
-    background: var(--color-rosa-fosc);
+.idiomes button:hover {
+    background: var(--purple-light);
 }
 
-/* ------------------------------------------------------------------
-   HERO
------------------------------------------------------------------- */
-
+/* --------------------------------------------------------------
+   HERO (IMATGE O VÍDEO DE FONS)
+-------------------------------------------------------------- */
 .hero {
-    background: linear-gradient(135deg, #ffd6eb, #f8c8d8, #ffe3f2);
-    padding: 120px 40px;
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    border-bottom: 4px solid var(--color-rosa);
+}
+
+.hero video, .hero img.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    object-fit: cover;
+    filter: brightness(0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
 }
 
 .hero-title {
-    font-size: 38px;
-    font-weight: 700;
-    color: var(--color-fosc);
-    max-width: 900px;
-    margin: 0 auto 15px;
+    font-size: 48px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    text-shadow: 0 0 12px rgba(0,0,0,0.8);
 }
 
 .hero-sub {
     font-size: 20px;
-    color: var(--color-text);
+    margin-top: 15px;
     margin-bottom: 30px;
+    color: var(--text-soft);
 }
 
 .hero-cta a {
-    display: inline-block;
-    padding: 12px 25px;
+    padding: 14px 26px;
     margin: 10px;
     border-radius: 8px;
-    font-weight: 600;
     text-decoration: none;
+    font-weight: 700;
 }
 
 .hero-cta a:first-child {
-    background: var(--color-rosa);
-    color: var(--color-blanc);
+    background: var(--purple-light);
+    color: var(--bg-main);
 }
-
 .hero-cta a:first-child:hover {
-    background: var(--color-rosa-fosc);
+    background: var(--accent-gold);
 }
 
 .hero-cta a:last-child {
-    background: var(--color-blanc);
-    color: var(--color-rosa-fosc);
-    border: 2px solid var(--color-rosa-fosc);
+    border: 2px solid var(--accent-gold);
+    color: var(--white);
 }
-
 .hero-cta a:last-child:hover {
-    background: var(--color-rosa);
-    color: white;
+    background: var(--accent-gold);
+    color: var(--bg-main);
 }
 
-/* ------------------------------------------------------------------
+/* --------------------------------------------------------------
    SECCIONS GENERALS
------------------------------------------------------------------- */
-
+-------------------------------------------------------------- */
 .section {
-    padding: 70px 40px;
+    padding: 80px 40px;
+    background: var(--bg-main);
 }
 
-.section.dark {
-    background: var(--color-fosc);
-    color: var(--color-blanc);
+.section.alt {
+    background: var(--bg-soft);
 }
 
 .section-title {
-    font-size: 32px;
-    margin-bottom: 30px;
-    font-weight: 700;
     text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--accent-gold);
+    margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
-/* ------------------------------------------------------------------
-   CARDS DE SERVEIS
------------------------------------------------------------------- */
-
+/* --------------------------------------------------------------
+   CARDS
+-------------------------------------------------------------- */
 .cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .card {
-    background: white;
-    width: 260px;
-    border-radius: 10px;
-    border: 2px solid var(--color-rosa);
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0px 6px 10px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s;
+    width: 280px;
+    padding: 30px;
+    background: var(--bg-soft);
+    border-radius: 14px;
+    border: 2px solid var(--purple-light);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0px 12px 20px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
 }
 
-/* ------------------------------------------------------------------
-   ENLLAÇOS DE SECCIÓ
------------------------------------------------------------------- */
-
-.section-actions a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: var(--color-rosa-fosc);
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 20px;
-}
-
-.section-actions a:hover {
-    background: var(--color-fosc);
-}
-
-/* ------------------------------------------------------------------
+/* --------------------------------------------------------------
    FOOTER
------------------------------------------------------------------- */
-
+-------------------------------------------------------------- */
 .site-footer {
-    background: var(--color-fosc);
-    color: var(--color-blanc);
-    padding: 40px 40px;
-    border-top: 3px solid var(--color-rosa);
-    margin-top: 40px;
+    background: #0b0712;
+    text-align: center;
+    padding: 40px;
+    border-top: 2px solid var(--purple-light);
 }
 
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.socials a {
-    color: var(--color-rosa);
-    font-weight: 600;
-    margin-right: 12px;
-    text-decoration: none;
-}
-
-.socials a:hover {
-    color: var(--color-blanc);
-}
+.site-footer p {
