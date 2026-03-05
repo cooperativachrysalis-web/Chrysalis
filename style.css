@@ -1,21 +1,27 @@
 /* --------------------------------------------------------------
-   TIPOGRAFIA + PALETA DE COLORS — CHRYSALIS A.F.
+   TIPOGRAFIA + COLORS HARMÒNICS CHRYSALIS
 -------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
-    --bg-main: #0f0a1a;           /* negre violeta profund */
-    --bg-soft: #1a1329;           /* gradient fosc */
-    --purple-strong: #5c1d80;     /* porpra intens identitari */
-    --purple-light: #b87de5;      /* porpra clar lluminós */
-    --accent-gold: #d9c178;       /* daurat subtil modern */
-    --white: #ffffff;
-    --text-light: #eae4f7;
-    --text-soft: #cfc7dd;
+    /* Rosa del logo */
+    --rosa-logo: #e84a89;
+    --rosa-suau: #fbd7e4;
+
+    /* Verd i daurat del podcast */
+    --verd-suau: #88a28c;
+    --verd-fosc: #4f6355;
+    --daurat: #d9b76c;
+
+    /* Colors base */
+    --blanc: #ffffff;
+    --negre: #1a1a1a;
+    --gris: #f6f6f6;
+    --text: #333333;
 }
 
 /* --------------------------------------------------------------
-   ESTILS BASE
+   ESTILS GLOBALS
 -------------------------------------------------------------- */
 * {
     margin: 0;
@@ -25,8 +31,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: var(--bg-main);
-    color: var(--text-light);
+    background: var(--gris);
+    color: var(--text);
     line-height: 1.7;
 }
 
@@ -34,146 +40,118 @@ body {
    HEADER
 -------------------------------------------------------------- */
 .site-header {
-    background: var(--bg-main);
-    border-bottom: 2px solid var(--purple-light);
-    padding: 20px 40px;
+    background: var(--blanc);
+    border-bottom: 2px solid var(--rosa-logo);
+    padding: 18px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
 }
 
 .logo-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 900;
-    color: var(--accent-gold);
-    letter-spacing: 2px;
+    color: var(--rosa-logo);
 }
 
 .main-nav a {
-    margin: 0 15px;
-    color: var(--text-light);
-    text-decoration: none;
+    margin: 0 14px;
+    color: var(--text);
     font-weight: 600;
-    transition: 0.3s;
+    text-decoration: none;
+    transition: 0.25s;
 }
 
 .main-nav a:hover {
-    color: var(--accent-gold);
+    color: var(--rosa-logo);
 }
 
 .idiomes button {
-    background: var(--purple-strong);
-    border: none;
+    background: var(--verd-fosc);
+    color: var(--blanc);
     padding: 6px 12px;
-    border-radius: 6px;
-    color: white;
-    font-weight: 600;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin-left: 5px;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: 0.25s;
 }
 
 .idiomes button:hover {
-    background: var(--purple-light);
+    background: var(--rosa-logo);
 }
 
 /* --------------------------------------------------------------
-   HERO (IMATGE O VÍDEO DE FONS)
+   HERO
 -------------------------------------------------------------- */
 .hero {
-    position: relative;
-    height: 75vh;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(135deg, var(--rosa-suau), var(--rosa-logo));
+    padding: 130px 40px;
     text-align: center;
-}
-
-.hero video, .hero img.hero-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    object-fit: cover;
-    filter: brightness(0.45);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 20px;
+    color: var(--negre);
 }
 
 .hero-title {
-    font-size: 48px;
-    font-weight: 900;
     font-family: 'Montserrat', sans-serif;
-    color: var(--white);
-    text-shadow: 0 0 12px rgba(0,0,0,0.8);
+    font-weight: 900;
+    font-size: 40px;
+    max-width: 900px;
+    margin: 0 auto 15px;
 }
 
 .hero-sub {
+    color: var(--text);
     font-size: 20px;
-    margin-top: 15px;
     margin-bottom: 30px;
-    color: var(--text-soft);
 }
 
 .hero-cta a {
-    padding: 14px 26px;
-    margin: 10px;
+    padding: 12px 22px;
     border-radius: 8px;
-    text-decoration: none;
+    margin: 10px;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .hero-cta a:first-child {
-    background: var(--purple-light);
-    color: var(--bg-main);
+    background: var(--rosa-logo);
+    color: var(--blanc);
 }
+
 .hero-cta a:first-child:hover {
-    background: var(--accent-gold);
+    background: var(--verd-fosc);
 }
 
 .hero-cta a:last-child {
-    border: 2px solid var(--accent-gold);
-    color: var(--white);
+    border: 2px solid var(--rosa-logo);
+    color: var(--rosa-logo);
 }
+
 .hero-cta a:last-child:hover {
-    background: var(--accent-gold);
-    color: var(--bg-main);
+    background: var(--rosa-logo);
+    color: var(--blanc);
 }
 
 /* --------------------------------------------------------------
    SECCIONS GENERALS
 -------------------------------------------------------------- */
+
 .section {
     padding: 80px 40px;
-    background: var(--bg-main);
-}
-
-.section.alt {
-    background: var(--bg-soft);
+    text-align: center;
 }
 
 .section-title {
-    text-align: center;
-    font-size: 34px;
+    font-size: 30px;
+    margin-bottom: 40px;
     font-weight: 800;
-    color: var(--accent-gold);
-    margin-bottom: 50px;
+    color: var(--verd-fosc);
     text-transform: uppercase;
 }
 
 /* --------------------------------------------------------------
-   CARDS
+   CARDS DE SERVEIS
 -------------------------------------------------------------- */
 .cards {
     display: flex;
@@ -183,27 +161,36 @@ body {
 }
 
 .card {
-    width: 280px;
-    padding: 30px;
-    background: var(--bg-soft);
-    border-radius: 14px;
-    border: 2px solid var(--purple-light);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
+    width: 260px;
+    background: var(--blanc);
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid var(--rosa-logo);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 }
 
 /* --------------------------------------------------------------
    FOOTER
 -------------------------------------------------------------- */
 .site-footer {
-    background: #0b0712;
-    text-align: center;
+    background: var(--verd-fosc);
     padding: 40px;
-    border-top: 2px solid var(--purple-light);
+    text-align: center;
+    color: var(--blanc);
 }
 
-.site-footer p {
+.site-footer .socials a {
+    color: var(--daurat);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.site-footer .socials a:hover {
+    color: var(--rosa-logo);
+}
