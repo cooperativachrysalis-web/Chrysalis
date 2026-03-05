@@ -1,99 +1,125 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chrysalis Cooperativa</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chrysalis Cooperativa</title>
 
+  <!-- ENLLAÇOS CORRECTES ALS FITXERS DE L'ARREL -->
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+
+  <!-- Colors del navegador (opcional) -->
+  <meta name="theme-color" content="#F08BB4" />
+</head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <img src="logo.png" alt="Chrysalis logo" class="logo">
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Chrysalis - inici">
+      <!-- Si tens un PNG del logotip, posa'n el nom aquí -->
+      <!-- <img src="logo.png" alt="Chrysalis logo" /> -->
+      <span class="logo-text">Chrysalis</span>
+    </a>
 
-        <nav id="menu">
-            <a href="index.html" data-i18n="menu.inici">Inici</a>
-            <a href="quisom.html" data-i18n="menu.quisom">Qui Som</a>
-            <a href="serveis.html" data-i18n="menu.serveis">Serveis</a>
-            <a href="eco.html" data-i18n="menu.eco">ECO A SU MEMORIA</a>
-            <a href="blog.html" data-i18n="menu.blog">Blog</a>
-            <a href="donacions.html" data-i18n="menu.donacions">Donacions</a>
-            <a href="contacte.html" data-i18n="menu.contacte">Contacte</a>
-        </nav>
+    <nav class="main-nav" aria-label="Navegació principal">
+      <a href="index.html" data-i18n="menu.inici">Inici</a>
+      <a href="qui-som.html" data-i18n="menu.quisom">Qui Som</a>
+      <a href="serveis.html" data-i18n="menu.serveis">Serveis</a>
+      <a href="eco.html" data-i18n="menu.eco">ECO A SU MEMORIA</a>
+      <a href="blog.html" data-i18n="menu.blog">Blog</a>
+      <a href="donacions.html" data-i18n="menu.donacions">Donacions</a>
+      <a href="contacte.html" data-i18n="menu.contacte">Contacte</a>
+    </nav>
 
-        <div class="idiomes">
-            <button onclick="setLanguage('ca')">CAT</button>
-            <button onclick="setLanguage('es')">ES</button>
-            <button onclick="setLanguage('en')">EN</button>
-        </div>
-    </header>
+    <div class="idiomes" aria-label="Selector d'idioma">
+      <button type="button" class="chip" onclick="setLanguage('ca')">CAT</button>
+      <button type="button" class="chip" onclick="setLanguage('es')">ES</button>
+      <button type="button" class="chip" onclick="setLanguage('en')">EN</button>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1 data-i18n="hero.titol">Acompanyem dones racialitzades supervivents de violències masclistes</h1>
-        <p data-i18n="hero.subtitol">Transformem cuidant. Cuidem transformant.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title" data-i18n="hero.titol">
+        Acompanyem dones racialitzades supervivents de violències masclistes
+      </h1>
+      <p class="hero-sub" data-i18n="hero.subtitol">
+        Transformem cuidant. Cuidem transformant.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="contacte.html" data-i18n="hero.necessito">Necessito ajuda</a>
+        <a class="btn ghost" href="donacions.html" data-i18n="hero.colabora">Vull col·laborar</a>
+      </div>
+    </div>
+  </section>
 
-        <div class="botons-hero">
-            <a href="contacte.html" class="btn1" data-i18n="hero.necessito">Necessito ajuda</a>
-            <a href="donacions.html" class="btn2" data-i18n="hero.colabora">Vull col·laborar</a>
-        </div>
-    </section>
+  <!-- SERVEIS (resum) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title" data-i18n="serveis.titol">Què oferim</h2>
 
-    <!-- SERVEIS RESUM -->
-    <section class="serveis-preview">
-        <h2 data-i18n="serveis.titol">Què oferim</h2>
+      <div class="cards">
+        <article class="card">
+          <h3 data-i18n="serveis.psico">Atenció psicològica</h3>
+          <p data-i18n="serveis.psico_txt">Sessions individuals i grupals amb professionals especialitzades.</p>
+        </article>
 
-        <div class="cards">
+        <article class="card">
+          <h3 data-i18n="serveis.juridic">Assessorament jurídic</h3>
+          <p data-i18n="serveis.juridic_txt">Regularització, drets, violència masclista i estrangeria.</p>
+        </article>
 
-            <div class="card">
-                <h3 data-i18n="serveis.psico">Atenció psicològica</h3>
-                <p data-i18n="serveis.psico_txt">Sessions individuals i grupals amb professionals especialitzades.</p>
-            </div>
+        <article class="card">
+          <h3 data-i18n="serveis.social">Acompanyament social</h3>
+          <p data-i18n="serveis.social_txt">Recursos, suport i xarxes comunitàries.</p>
+        </article>
+      </div>
 
-            <div class="card">
-                <h3 data-i18n="serveis.juridic">Assessorament jurídic</h3>
-                <p data-i18n="serveis.juridic_txt">Regularització, drets, violència masclista i estrangeria.</p>
-            </div>
+      <div class="section-actions">
+        <a class="btn link" href="serveis.html" data-i18n="serveis.veure">Veure tots els serveis →</a>
+      </div>
+    </div>
+  </section>
 
-            <div class="card">
-                <h3 data-i18n="serveis.social">Acompanyament social</h3>
-                <p data-i18n="serveis.social_txt">Recursos, suport i xarxes comunitàries.</p>
-            </div>
+  <!-- ECO A SU MEMORIA -->
+  <section class="section dark">
+    <div class="container">
+      <h2 data-i18n="eco.titol">ECO A SU MEMORIA</h2>
+      <p data-i18n="eco.txt">
+        Dignifiquem la memòria, visibilitzem les vides i denunciem la violència.
+      </p>
+      <a class="btn primary" href="eco.html" data-i18n="eco.explorar">Explorar el projecte →</a>
+    </div>
+  </section>
 
-        </div>
+  <!-- BLOG (resum) -->
+  <section class="section">
+    <div class="container">
+      <h2 data-i18n="blog.titol">Articles recents</h2>
+      <p data-i18n="blog.txt">Reflexions, memòria, interseccionalitat i resistències.</p>
+      <a class="btn link" href="blog.html" data-i18n="blog.veure">Anar al blog →</a>
+    </div>
+  </section>
 
-        <a href="serveis.html" class="btn3" data-i18n="serveis.veure">Veure tots els serveis →</a>
-    </section>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>© 2026 Chrysalis Cooperativa</strong>
+        <p class="muted">Acompanyament integral, cures i comunitat.</p>
+      </div>
 
-    <!-- ECO -->
-    <section class="eco">
-        <h2 data-i18n="eco.titol">ECO A SU MEMORIA</h2>
-        <p data-i18n="eco.txt">Dignifiquem la memòria, visibilitzem les vides i denunciem la violència.</p>
-        <a href="eco.html" class="btn2" data-i18n="eco.explorar">Explorar el projecte →</a>
-    </section>
-
-    <!-- BLOG -->
-    <section class="blog-preview">
-        <h2 data-i18n="blog.titol">Articles recents</h2>
-        <p data-i18n="blog.txt">Reflexions, memòria, interseccionalitat i resistències.</p>
-        <a href="blog.html" class="btn3" data-i18n="blog.veure">Anar al blog →</a>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Chrysalis Cooperativa</p>
-        <p data-i18n="footer.socials">Segueix-nos:</p>
-
-        <div class="xarxes">
-            <a href="https://instagram.com" target="_blank">Instagram</a>
-            <a href="https://tiktok.com" target="_blank">TikTok</a>
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://spotify.com" target="_blank">Spotify</a>
-        </div>
-    </footer>
+      <div class="socials">
+        <span data-i18n="footer.socials">Segueix-nos:</span>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Spotify">Spotify</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
