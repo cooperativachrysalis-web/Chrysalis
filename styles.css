@@ -247,3 +247,123 @@ body {
 .alliances li {
     margin: 0.4rem 0;
 }
+/* ======= Serveis ======= */
+.hero-services {
+  background: linear-gradient(0deg, rgba(17,17,17,0.45), rgba(17,17,17,0.45)),
+              url('img/hero-serveis.jpg') center/cover no-repeat;
+}
+
+.service-section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-section.alt {
+  background: var(--beix);
+  border-top: 2px solid var(--rosa);
+  border-bottom: 2px solid var(--rosa);
+}
+
+.service-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.service-title h2 {
+  font-family: var(--titol);
+  margin: 0;
+}
+
+.service-lead {
+  font-weight: 500;
+  margin: 0.3rem 0 1rem 0;
+}
+
+.service-bullets {
+  padding-left: 1.2rem;
+  line-height: 1.7;
+}
+
+/* Píndoles (àrees jurídiques) */
+.pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.pill {
+  background: var(--blanc);
+  color: var(--negre);
+  border: 2px solid var(--rosa);
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Audiences (dones, infants, adolescents, joves) */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 950px) {
+  .audience-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .audience-grid { grid-template-columns: 1fr; }
+}
+
+.audience-card {
+  background: var(--blanc);
+  border-left: 5px solid var(--rosa);
+  border-radius: 10px;
+  padding: 1.2rem 1rem 1rem 1rem;
+}
+
+.audience-card h3 {
+  margin-top: 0;
+  font-family: var(--titol);
+}
+
+/* Chips per a formació */
+.chip-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 850px) {
+  .chip-groups { grid-template-columns: 1fr; }
+}
+
+.chip-group h4 {
+  margin: 0 0 0.4rem 0;
+  font-family: var(--titol);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  background: var(--rosa);
+  color: var(--blanc);
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Estat actiu de menú */
+.nav-menu a.active {
+  border-bottom: 3px solid var(--rosa);
+  padding-bottom: 4px;
+}
