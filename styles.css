@@ -1,0 +1,149 @@
+/* -------- COLORS -------- */
+:root {
+    --rosa: #E5007E;
+    --rosa-fosc: #C4006A;
+    --violeta: #5A2A83;
+    --negre: #111111;
+    --beix: #F5EFEA;
+    --blanc: #ffffff;
+
+    --titol: 'Playfair Display', serif;
+    --text: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--beix);
+    color: var(--negre);
+    font-family: var(--text);
+}
+
+/* -------- HEADER -------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: var(--blanc);
+    border-bottom: 2px solid var(--rosa);
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--negre);
+    font-weight: 600;
+}
+
+.btn-rosa {
+    background: var(--rosa);
+    padding: 0.6rem 1rem;
+    color: var(--blanc) !important;
+    border-radius: 6px;
+}
+
+/* -------- HERO -------- */
+.hero {
+    background: linear-gradient(rgba(17,17,17,0.45), rgba(17,17,17,0.45)),
+                url('img/hero.jpg') center/cover no-repeat;
+    color: var(--blanc);
+    padding: 10rem 3rem;
+    text-align: left;
+}
+
+.hero h1 {
+    font-family: var(--titol);
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.btn-violeta {
+    background: var(--violeta);
+    color: var(--blanc);
+    padding: 0.8rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* -------- INTRO -------- */
+.intro {
+    text-align: center;
+    padding: 4rem 3rem;
+}
+
+.intro h2 {
+    font-family: var(--titol);
+}
+
+/* -------- CARDS -------- */
+.quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.card {
+    background: var(--blanc);
+    border: 2px solid var(--rosa);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--negre);
+    width: 280px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: var(--rosa);
+    color: var(--blanc);
+}
+
+/* -------- MANIFEST -------- */
+.manifest {
+    text-align: center;
+    padding: 5rem 3rem;
+    background: var(--rosa-fosc);
+    color: var(--blanc);
+}
+
+.manifest h2 {
+    font-family: var(--titol);
+    font-size: 2.4rem;
+}
+
+/* -------- CTA -------- */
+.cta {
+    text-align: center;
+    padding: 5rem 3rem;
+}
+
+.btn-rosa-gran {
+    background: var(--rosa);
+    padding: 1rem 2rem;
+    color: var(--blanc);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+/* -------- FOOTER -------- */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--negre);
+    color: var(--blanc);
+}
+``
