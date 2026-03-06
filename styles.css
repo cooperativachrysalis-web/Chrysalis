@@ -236,6 +236,13 @@ body {
     list-style: none;
     padding: 0;
 }
+.mvv-icon {
+    margin-bottom: 1rem;
+}
+
+.mvv-card svg {
+    margin-bottom: 0.5rem;
+}
 
 .alliances li {
     margin: 0.4rem 0;
