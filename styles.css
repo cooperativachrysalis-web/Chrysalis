@@ -367,3 +367,61 @@ body {
   border-bottom: 3px solid var(--rosa);
   padding-bottom: 4px;
 }
+/* ===== Qui Som — Missió / Visió / Valors en 3 columnes ===== */
+.mvv {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+
+  /* Clau perquè surtin de costat: */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.mvv .mvv-card {
+  background: transparent;
+  border: none;
+  color: var(--verd);
+}
+
+.mvv .mvv-card h3 {
+  font-family: var(--titol);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.8rem 0;
+  color: var(--verd);
+}
+
+.mvv .mvv-card p,
+.mvv .mvv-card ul {
+  color: #222;          /* cos del text fosc per llegibilitat */
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Columna central amb vora discontínua i fons suau */
+.mvv .mvv-card--dashed {
+  border: 2px dashed var(--verd-linia);
+  padding: 1.2rem 1rem;
+  background: var(--verd-suau);
+  border-radius: 8px;
+}
+
+/* Responsiu (en mòbil passen a 1 columna) */
+@media (max-width: 900px) {
+  .mvv {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Títol verd centrat opcional */
+.page-title {
+  text-align: center;
+  color: var(--verd);
+  font-family: var(--titol);
+  font-size: 2.4rem;
+  margin: 2.5rem 0 1.5rem;
+  letter-spacing: 0.02em;
+}
