@@ -147,3 +147,96 @@ body {
     color: var(--blanc);
 }
 ``
+/* ---- HERO PETIT ---- */
+.hero-small {
+    background: var(--rosa);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: var(--blanc);
+}
+
+.hero-small h1 {
+    font-family: var(--titol);
+    font-size: 2.8rem;
+}
+
+/* ---- INTRO ---- */
+.about-intro {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ---- MISSIÓ VISIÓ VALORS ---- */
+.mvv {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+}
+
+.mvv-card {
+    background: var(--blanc);
+    border: 2px solid var(--rosa);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+}
+
+.mvv-card h3 {
+    font-family: var(--titol);
+}
+
+/* ---- HISTORY ---- */
+.history {
+    background: var(--rosa-fosc);
+    color: var(--blanc);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+/* ---- TEAM ---- */
+.team {
+    padding: 4rem 2rem;
+}
+
+.team-section-title {
+    margin-top: 3rem;
+    font-family: var(--titol);
+}
+
+.team-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.team-card {
+    background: var(--beix);
+    border-left: 5px solid var(--rosa);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 260px;
+}
+
+/* ---- ALIANCES ---- */
+.alliances {
+    background: var(--violeta);
+    color: var(--blanc);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.alliances ul {
+    list-style: none;
+    padding: 0;
+}
+
+.alliances li {
+    margin: 0.4rem 0;
+}
