@@ -471,3 +471,75 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ================================
+   TARGETES EN COLUMNES (ESTIL IMATGE)
+   ================================ */
+
+.cards-intro {
+    background: #F6EFEA; /* beix suau */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.intro-title {
+    font-family: var(--titol);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.intro-text {
+    max-width: 750px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card-box {
+    background: white;
+    padding: 2rem 1.5rem;
+    border: 2px solid #E5007E;   /* rosa Chrysalis */
+    border-radius: 12px;
+    min-height: 160px;
+    transition: 0.3s;
+}
+
+.card-box h3 {
+    font-size: 1.4rem;
+    font-family: var(--titol);
+    margin-bottom: 0.7rem;
+}
+
+.card-box p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Efecte hover */
+.card-box:hover {
+    background: #E5007E;
+    border-color: #E5007E;
+    color: white;
+}
+
+.card-box:hover p {
+    color: white;
+}
+
+/* Responsiu (mòbil) */
+@media (max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
